@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    background-image: url("./img/annie-spratt-OTy0mkqc2Yk-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.task-area {
+    border: 1px solid lightgrey;
+    margin-top: 2rem;
+}
+
+.task-tabs {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.task-tabs div {
+    padding: 1rem;
+}
+
+#under-line {
+    height: 4px;
+    background-color: lightgreen;
+    position: absolute;
+    width: 70px;
+    left: 0px;
+    top: 53px;
+    padding: 0;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
