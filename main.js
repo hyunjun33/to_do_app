@@ -24,7 +24,12 @@ function addTask() {
         id : randomIdGenerate(),
         taskContent : taskInput.value,
         isComplete : false,
-    }
+    };
+
+    if (task.taskContent === "") {
+        return
+    };
+    
     taskList.push(task)
     console.log(taskList)
 };
