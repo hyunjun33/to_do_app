@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-image: url("./img/annie-spratt-OTy0mkqc2Yk-unsplash.jpg");
@@ -35,8 +39,45 @@ body {
     top: 53px;
     padding: 0;
 }
+
 .task {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid lightgray;
+}
+
+.task span {
+    padding: 1rem;
+}
+
+.task-done {
+    text-decoration: line-through;
+    background-color: #FDF5E6;
+    width: 100%;
+}
+
+.button-area {
+    display: flex;
+}
+
+.button-area button {
+    height: 100%;
+    border: none;
+    width: 5em;
+    margin: 0;
+    background-color: white;
+}
+
+.fa-check {
+    color:  burlywood;
+}
+
+.fa-trash {
+    color: burlywood;
+}
+
+.fa-rotate-right {
+    color: #4169E1;
 }
