@@ -22,9 +22,9 @@ let filterList = [];
 addButton.addEventListener("click", addTask);
 taskInput.addEventListener("keyup", (event) => {
     if (event.key === 'Enter') {
-        addTask();
-        render();
-    }
+        addTask(event)
+        render()
+    };
 })
 addButton.addEventListener("click", render);
 taskInput.addEventListener("focus", () => {taskInput.value = ""}, );
@@ -50,13 +50,14 @@ function addTask() {
         }
         taskList.push(task)
     };
-    render();
-    console.log(taskList)
+    filter();
+    console.log(taskList);
 };
 
 
 function render() {
     let list = [];
+    let resultHtml = "";
 
     if (mode === "all") {
         list = taskList;
@@ -65,7 +66,6 @@ function render() {
         list = filterList;
     }
 
-    let resultHtml = "";
     for (let i = 0; i < list.length; i++) {
 
         if (list[i].isComplete === true) {
@@ -103,7 +103,7 @@ function toggleComplete(id) {
             break
         };
     };
-    render();
+    filter();
     console.log(taskList);
 };
 
